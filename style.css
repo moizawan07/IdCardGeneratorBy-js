@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+*{
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    list-style: none;
+}
+input:focus{
+    border: 1px solid brown !important;
+}
+/* Basic styling for the ID card */
+.id-card-inputs {
+    width: 100%;
+    max-width: 380px;
+    margin: 40px auto;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-color: white;
+    padding-block: 20px;
+    /* box-shadow: 0px 0px 2px black; */
+}
+.id-card-inputs h2 {
+    /* text-align: center; */
+    margin-bottom: 20px;
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    color: brown;
+    margin-left: 25px;
+    /* font-size: 25px; */
+}
+.field-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 12px;
+}
+.field {
+    flex: 1;
+    min-width: 180px;
+}
+.field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: rgb(124, 67, 67);
+}
+.field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: grey;
+}
+.images {
+    display: flex;
+    gap: 10px;
+}
+.images img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.btns{
+    margin-top: 30px;
+}
+.btns button{
+    width: 100%;
+    padding-inline: 25px;
+    padding-block: 10px;
+    border: none;
+    background-color: rgb(184, 78, 78);
+    color: white;
+    border-radius: 3px;
+    font-weight: 500;
+    font-family: pacifico;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+input::placeholder{
+    color: brown;
+}
+#idcardContainer{
+    margin: 20px auto;
+    width: 400px;
+    border-radius: 20px;
+    background-color: #EEF1F0;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+    padding-inline: 15px;
+    padding-block: 10px;
+    display: none;
+}
+.idcardMain{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px 5px 0px;
+}
+.LeftMain{
+    width: 70%;
+    background-color: white;
+    padding-left: 50px;
+    padding-bottom: 50px;
+}
+#RightMain{
+    width: 30%;
+}
+.LeftMain .imgCon{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    left: 20px;
+    z-index: 9999;
+    /* top: 30px; */
+    margin-top: 50px;
+}
+.LeftMain .imgCon img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.LeftMain h1{
+    margin-top: 10px;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: "Teko", serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.LeftMain p{
+    font-weight: 400;
+}
+.lastTxtBox{
+    margin-top: 40px;
+}
+.lastTxtBox ul li span{
+    font-size: 15px;
+}
+.leftTxt{
+    margin-right: 20px;
+    color: rgb(36, 36, 36);
+}
+.lastTxtBox ul li:nth-child(3) span{
+   font-size: 13px;
+}
+#selectBox{
+    display: block;
+    margin: auto;
+    background-color: transparent;
+    border: none;
+    color: brown;
+    font-weight: 500;
+    box-shadow: 0px 0px 3px brown;
+    /* padding-left: 5px; */
+    text-align: center;
+    width: 100px;
+}
+.LeftMain .blue{
+    color: blue;
+}
+.LeftMain .orange{
+    color: orange;
+}
+.LeftMain .green{
+    color: green;
+}
+.LeftMain .red{
+    color: red;
+}
+.LeftMain .black{
+    color: black;
+}
+.LeftMain .brown{
+    color: brown;
+}
+.LeftMain .cyan{
+    color: darkcyan;
+}
+.LeftMain .grey{
+   color: darkslategray;
+}
+.LeftMain .lblue{
+   color:rgb(80, 194, 232);
+}
+.LeftMain .lgrey{
+   color: lightslategray
+}
+
+#RightMain.blue{
+   background-color: rgb(22, 22, 213);
+}
+#RightMain.orange{
+    background-color: rgb(230, 159, 26);
+}
+#RightMain.green{
+    background-color: darkgreen;
+}
+#RightMain.red{
+    background-color: darkred;
+}
+#RightMain.black{
+    background-color: rgba(0, 0, 0, 0.8)
+}
+#RightMain.brown{
+    background-color: rgb(90, 48, 48)
+}
+#RightMain.cyan{
+    background-color: rgb(26, 145, 145);
+}
+#RightMain.grey{
+    background-color: darkslategray;
+}
+#RightMain.lblue{
+    background-color: rgb(80, 194, 232);
+}
+#RightMain.lgrey{
+    background-color: lightslategray;
+}
