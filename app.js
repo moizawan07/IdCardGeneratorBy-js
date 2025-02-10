@@ -12,7 +12,7 @@ const createCV = () => {
       email : document.getElementById('email').value,
       phone : document.getElementById('phone').value,
       dob   : document.getElementById('DOB').value,
-      img   : document.getElementById('img'),
+      img   : document.getElementById('img').value,
       idNum : idNo
     }
       for(let key in inputFields){
@@ -26,9 +26,15 @@ const createCV = () => {
       }
 
       if(decionValues){
+         inputFields.img  = document.getElementById('img');
         imgSrc = URL.createObjectURL(inputFields.img.files[0])
           idCardInputs.style.display = 'none'
           idCardContainer.style.display = 'block'
+          idCardContainer.setAttribute('data-aos',"fade-down")
+          idCardContainer.setAttribute("data-aos-easing","linear")
+          idCardContainer.setAttribute("data-aos-duration","600")
+          console.log(idCardContainer);
+          
           idCardContainer.innerHTML += `
                <div class = 'idcardMain'>
                    <div class = 'LeftMain'>
@@ -48,6 +54,14 @@ const createCV = () => {
                    </div>
                    <div id='RightMain' class='blue'></div>
                 </div>
+          `
+          idCardContainer.outerHTML += `
+             <div class="downloaddiv" onClick="downloadIdCard()" data-aos="fade-left"
+                                                                  data-aos-anchor="#example-anchor"
+                                                                  data-aos-offset="100"
+                                                                  data-aos-duration="1200">
+                   <i class="fa-solid fa-download"></i>
+                  </div>
           `
       }
       else{
@@ -108,4 +122,26 @@ const styles = () => {
        head.className = 'lgrey'
        riBackgr.className = 'lgrey'
     }
+}
+
+const downloadIdCard = () => {
+   
+  
+   const cvElement = document.getElementById("idcardContainer"); // CV ka section select karein
+ 
+   // HTML2Canvas se screenshot lein
+   html2canvas(cvElement).then((canvas) => {
+     // Canvas ko image mein convert karein
+     const image = canvas.toDataURL("image/png");
+ 
+     // Image ko download karwane ke liye anchor tag banayein
+     const link = document.createElement("a");
+     link.href = image;
+     link.download = "idCard.png"; // Download file ka naam
+     link.click(); // Click event trigger karein
+   });
+ 
+ 
+
+
 }

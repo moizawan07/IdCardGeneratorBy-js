@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ID Card</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Link -->
+    <script
+      src="https://kit.fontawesome.com/7e4bb5f098.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Css ANimation Library  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
     <div class="id-card-inputs">
-        <h2>ID Card Generator..!</h2>
-        <!-- Form Fields Container -->
-        <div class="field-container">
-            <!-- First Name -->
-            <div class="field">
-                <label for="first-name">First Name:</label>
-                <input type="text" id="first-name" placeholder="Enter First Name">
-            </div>
-
-            <!-- Role -->
-            <div class="field">
-                <label for="role">Role:</label>
-                <input type="text" id="role" placeholder="Enter Role">
-            </div>
-
-            <!-- Email -->
-            <div class="field">
-                <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Enter Email">
-            </div>
-<!-- Phone  -->
-            <div class="field">
-                <label for="email2">Phone</label>
-                <input type="number" id="phone" placeholder="Enter Phone number">
-            </div>
-<!-- DOB  -->
-            <div class="field">
-                <label for="email2">DOB</label>
-                <input type="date" id="DOB" placeholder="Enter DOB">
-            </div>
-<!-- Images Section -->
-            <div class="field">
-                <label for="img">Image:</label>
-               <input type="file" id="img">
-            </div>
+      <h2>ID Card Generator..!</h2>
+      <!-- Form Fields Container -->
+      <div class="field-container">
+        <!-- First Name -->
+        <div class="field">
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" placeholder="Enter First Name" />
         </div>
-       
-        <div class="btns">
-            <button onclick="createCV()">Create</button>
+
+        <!-- Role -->
+        <div class="field">
+          <label for="role">Role:</label>
+          <input type="text" id="role" placeholder="Enter Role" />
         </div>
+
+        <!-- Email -->
+        <div class="field">
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="Enter Email" />
+        </div>
+        <!-- Phone  -->
+        <div class="field">
+          <label for="email2">Phone</label>
+          <input type="number" id="phone" placeholder="Enter Phone number" />
+        </div>
+        <!-- DOB  -->
+        <div class="field">
+          <label for="email2">DOB</label>
+          <input type="date" id="DOB" placeholder="Enter DOB" />
+        </div>
+        <!-- Images Section -->
+        <div class="field">
+          <label for="img">Image:</label>
+          <input type="file" id="img" />
+        </div>
+      </div>
+
+      <div class="btns">
+        <button onclick="createCV()">Create</button>
+      </div>
     </div>
-    <div  id="idcardContainer">
-        <select id="selectBox" onchange="styles()">
-            <option value="Style1">Style1</option>
-            <option value="Style2">Style2</option>
-            <option value="Style3">Style3</option>
-            <option value="Style4">Style4</option>
-            <option value="Style5">Style5</option>
-            <option value="Style6">Style6</option>
-            <option value="Style7">Style7</option>
-            <option value="Style8">Style8</option>
-            <option value="Style9">Style9</option>
-            <option value="Style10">Style10</option>
-        </select>
+    <div id="idcardContainer">
+      <select id="selectBox" onchange="styles()">
+        <option value="Style1">Style1</option>
+        <option value="Style2">Style2</option>
+        <option value="Style3">Style3</option>
+        <option value="Style4">Style4</option>
+        <option value="Style5">Style5</option>
+        <option value="Style6">Style6</option>
+        <option value="Style7">Style7</option>
+        <option value="Style8">Style8</option>
+        <option value="Style9">Style9</option>
+        <option value="Style10">Style10</option>
+      </select>
     </div>
 
+    <!--  Animation   -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!--  Download Canva   -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas"></script>
+
+    <!--  Personal   -->
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    list-style: none;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: brown;
+    color: white;
+}
+
+.navbar .logo h1 {
+    font-family: "Pacifico", serif;
+    font-size: 24px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    background-color: brown;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Main Container (Two Columns) */
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 1;
+}
+
+/* ID Card Form */
+.id-card-inputs {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.id-card-inputs h2 {
+    font-family: "Pacifico", serif;
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.field-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.field label {
+    font-weight: 600;
+    color: rgb(124, 67, 67);
+}
+
+.field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: grey;
+}
+
+.btns button {
+    width: 100%;
+    padding: 10px;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ID Card Preview */
+.idcard-preview {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.idcardMain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.LeftMain {
+    width: 70%;
+}
+
+#RightMain {
+    width: 30%;
+    background-color: brown;
+}
+
+.LeftMain .imgCon img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.LeftMain h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.LeftMain p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.lastTxtBox ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: brown;
+    color: white;
+    margin-top: 20px;
+}

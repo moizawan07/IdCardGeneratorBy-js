@@ -11,6 +11,7 @@
     font-weight: 300;
     list-style: none;
 }
+
 input:focus{
     border: 1px solid brown !important;
 }
@@ -90,13 +91,14 @@ input::placeholder{
     color: brown;
 }
 #idcardContainer{
-    margin: 20px auto;
+    margin: 50px auto;
     width: 400px;
     border-radius: 20px;
     background-color: #EEF1F0;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
     padding-inline: 15px;
-    padding-block: 10px;
+   padding-top: 10px;
+   padding-bottom: 20px;
     display: none;
 }
 .idcardMain{
@@ -227,4 +229,21 @@ input::placeholder{
 }
 #RightMain.lgrey{
     background-color: lightslategray;
+}
+
+
+/* Downlod css */
+.downloaddiv{
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-radius: 40px;
+    color: white !important;
+    text-align: center;
+    align-content: center;
+    font-size: 20px;
+    position: fixed; 
+    bottom: 40px;
+    right: 50px;
+    /* transition: transform 0.8s, right 2s ease-in; */
 }
