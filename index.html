@@ -1,86 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ID Card</title>
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="style.css">
     <!-- Font Awesome Link -->
-    <script
-      src="https://kit.fontawesome.com/7e4bb5f098.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Css ANimation Library  -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  </head>
-  <body>
-    <div class="id-card-inputs">
-      <h2>ID Card Generator..!</h2>
-      <!-- Form Fields Container -->
-      <div class="field-container">
-        <!-- First Name -->
-        <div class="field">
-          <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" placeholder="Enter First Name" />
+    <script src="https://kit.fontawesome.com/7e4bb5f098.js" crossorigin="anonymous"></script>
+    <!-- CSS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>Generate With Us</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <!-- <section class="hero">
+        <div class="hero-content">
+            <h2>Create Your ID Card in Minutes!</h2>
+            <p>Fill out the form and preview your ID card instantly.</p>
+        </div>
+    </section> -->
+
+    <!-- Main Content (Two Columns) -->
+    <main class="container">
+        <!-- Left Column: ID Card Form -->
+        <div class="left-column">
+            <div class="id-card-inputs">
+                <h2>ID Card Generator..!</h2>
+                <!-- Form Fields Container -->
+                <div class="field-container">
+                    <!-- First Name -->
+                    <div class="field">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" placeholder="Enter First Name">
+                    </div>
+
+                    <!-- Role -->
+                    <div class="field">
+                        <label for="role">Role:</label>
+                        <input type="text" id="role" placeholder="Enter Role">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="field">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter Email">
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="field">
+                        <label for="phone">Phone:</label>
+                        <input type="number" id="phone" placeholder="Enter Phone number">
+                    </div>
+
+                    <!-- DOB -->
+                    <div class="field">
+                        <label for="DOB">DOB:</label>
+                        <input type="date" id="DOB" placeholder="Enter DOB">
+                    </div>
+
+                    <!-- Image Upload -->
+                    <div class="field">
+                        <label for="img">Image:</label>
+                        <input type="file" id="img">
+                    </div>
+                </div>
+
+                <!-- Create Button -->
+                <div class="btns">
+                    <button onclick="createCV()">Create</button>
+                </div>
+            </div>
         </div>
 
-        <!-- Role -->
-        <div class="field">
-          <label for="role">Role:</label>
-          <input type="text" id="role" placeholder="Enter Role" />
-        </div>
+        <!-- Right Column: ID Card Preview -->
+        <div id="idcardContainer" class="right-column">
+            <select id="selectBox" onchange="styles()">
+              <option value="Style1">Style1</option>
+              <option value="Style2">Style2</option>
+              <option value="Style3">Style3</option>
+              <option value="Style4">Style4</option>
+              <option value="Style5">Style5</option>
+              <option value="Style6">Style6</option>
+              <option value="Style7">Style7</option>
+              <option value="Style8">Style8</option>
+              <option value="Style9">Style9</option>
+              <option value="Style10">Style10</option>
+            </select>
+          </div>
+        <!-- <div class="right-column">
+            <div class="idcard-preview">
+                <div class="idcardMain">
+                    <div class="LeftMain">
+                        <div class="imgCon">
+                            <img src="https://via.placeholder.com/150" alt="User Image">
+                        </div>
+                        <h1>John Doe</h1>
+                        <p>Software Engineer</p>
+                        <div class="lastTxtBox">
+                            <ul>
+                                <li><span class="leftTxt">Email:</span>john.doe@example.com</li>
+                                <li><span class="leftTxt">Phone:</span>+1234567890</li>
+                                <li><span class="leftTxt">DOB:</span>01/01/1990</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="RightMain" class="blue"></div>
+                </div>
+            </div>
+        </div> -->
+    </main>
 
-        <!-- Email -->
-        <div class="field">
-          <label for="email">Email:</label>
-          <input type="email" id="email" placeholder="Enter Email" />
-        </div>
-        <!-- Phone  -->
-        <div class="field">
-          <label for="email2">Phone</label>
-          <input type="number" id="phone" placeholder="Enter Phone number" />
-        </div>
-        <!-- DOB  -->
-        <div class="field">
-          <label for="email2">DOB</label>
-          <input type="date" id="DOB" placeholder="Enter DOB" />
-        </div>
-        <!-- Images Section -->
-        <div class="field">
-          <label for="img">Image:</label>
-          <input type="file" id="img" />
-        </div>
-      </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 ID Card Generator. All rights reserved.</p>
+    </footer>
 
-      <div class="btns">
-        <button onclick="createCV()">Create</button>
-      </div>
-    </div>
-    <div id="idcardContainer">
-      <select id="selectBox" onchange="styles()">
-        <option value="Style1">Style1</option>
-        <option value="Style2">Style2</option>
-        <option value="Style3">Style3</option>
-        <option value="Style4">Style4</option>
-        <option value="Style5">Style5</option>
-        <option value="Style6">Style6</option>
-        <option value="Style7">Style7</option>
-        <option value="Style8">Style8</option>
-        <option value="Style9">Style9</option>
-        <option value="Style10">Style10</option>
-      </select>
-    </div>
+     <!--  Animation   -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+       AOS.init();
+     </script>
+ 
+     <!--  Download Canva   -->
+     <script src="https://cdn.jsdelivr.net/npm/html2canvas"></script>
 
-    <!--  Animation   -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-
-    <!--  Download Canva   -->
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas"></script>
-
-    <!--  Personal   -->
-    <script src="app.js"></script>
-  </body>
+    <script src="../app.js"></script>
+</body>
 </html>
